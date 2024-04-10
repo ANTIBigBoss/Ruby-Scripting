@@ -1,0 +1,12 @@
+<!-- index.html.erb -->
+
+<h1>List of Characters</h1>
+
+<ul>
+  <% @characters.each do |character| %>
+    <li>
+      <%= link_to character.name, character %>
+      <!-- Assuming you want to link each character to their show page -->
+    </li>
+  <% end %>
+</ul>

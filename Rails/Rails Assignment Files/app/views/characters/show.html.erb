@@ -1,0 +1,12 @@
+<h1><%= @character.name %></h1>
+
+<p><strong>Description:</strong> <%= @character.description %></p>
+
+<h2>Appears in Games:</h2>
+<ul>
+  <% @character.games.each do |game| %>
+    <li><%= game.title %> (Released <%= game.release_year %>)</li>
+  <% end %>
+</ul>
+
+<%= link_to 'Back', characters_path %>
